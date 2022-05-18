@@ -1,0 +1,77 @@
+Activity 1:--
+create table student_info (full_name Varchar(100), age int, class_name Varchar(500));
+
+INSERT INTO student_info (full_name, age, class_name)
+VALUES ('John', 6, 'com');
+
+
+Activity 2:--
+select full_name from student_info where age = 6;
+
+insert into student_info(full_name, age, class_name) values ('Ishita', 12, '8th');
+
+select * from student_info;
+
+
+
+Activity 3:--
+select age, class_name from student_info;  
+
+select age, full_name from student_info where class_name = '8th'; 
+
+
+Activity 4:--
+update student_info
+set last_name = 'Tyagi'
+where age = 12;
+
+select * from student_info;
+
+update student_info
+set last_name = 'Martin'
+where full_name = 'John';
+
+select * from student_info;
+
+
+Activity 5:--
+update student_info
+set class_name = 'Btech'
+where full_name = 'John';
+
+alter table student_info 
+rename column full_name to first_name;
+
+
+Activity 6:--
+select * from orders; 
+
+select distinct salesman_id from orders;
+
+select order_no from orders
+order by order_date;
+
+select order_no from orders
+order by purchase_amount DESC;
+
+select * from orders
+where purchase_amount < 500;
+
+select * from orders
+where purchase_amount between 1000 and 2000;
+
+
+Activity 7:--
+select sum(pur_amt) as total_order from orders;
+
+select avg(pur_amt) as avg_amt from orders;
+
+select max(pur_amt) as max_amt from orders;
+
+select min(pur_amt) as max_amt from orders;
+
+select count(distinct(name)) from orders;
+
+
+
+
